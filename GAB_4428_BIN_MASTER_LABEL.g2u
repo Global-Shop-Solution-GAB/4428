@@ -1,0 +1,303 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.fMain..create(BaseForm)
+Gui.fMain..caption("Bin Master Labels (ARC 4428)")
+Gui.fMain..size(357,316)
+Gui.fMain..minx(0)
+Gui.fMain..miny(0)
+Gui.fMain..position(0,0)
+Gui.fMain..forecolor(0)
+Gui.fMain..BackColor(-2147483633)
+Gui.fMain..mousepointer(0)
+Gui.fMain..Event(UnLoad,cmdcancel_click)
+Gui.fMain..AlwaysOnTop(False)
+Gui.fMain..FontName("Tahoma")
+Gui.fMain..FontSize(8.25)
+Gui.fMain..ControlBox(True)
+Gui.fMain..MaxButton(True)
+Gui.fMain..MinButton(True)
+Gui.fMain..Moveable(True)
+Gui.fMain..Sizeable(True)
+Gui.fMain..ShowInTaskBar(True)
+Gui.fMain..TitleBar(True)
+Gui.fMain.cmdSelectReport.Create(Button)
+Gui.fMain.cmdSelectReport.Enabled(True)
+Gui.fMain.cmdSelectReport.Visible(True)
+Gui.fMain.cmdSelectReport.Zorder(0)
+Gui.fMain.cmdSelectReport.Size(23,23)
+Gui.fMain.cmdSelectReport.Position(74,147)
+Gui.fMain.cmdSelectReport.Caption("")
+Gui.fMain.cmdSelectReport.FontName("Tahoma")
+Gui.fMain.cmdSelectReport.FontSize(8.25)
+Gui.fMain.cmdSelectReport.SvgPicture("icon_browser_color")
+Gui.fMain.cmdSelectReport.Event(Click,cmdSelectReport_Click)
+Gui.fMain.cmdSelectReport.TabStop(True)
+Gui.fMain.cmdSelectReport.TabIndex(8)
+Gui.fMain.lblPrinter.Create(Label,"Label Printer",True,60,13,0,16,177,True,0,"Tahoma",8.25,,0,0)
+Gui.fMain.lblPrinter.BorderStyle(0)
+Gui.fMain.ddlPrinter.Create(DropDownList)
+Gui.fMain.ddlPrinter.Enabled(True)
+Gui.fMain.ddlPrinter.Visible(True)
+Gui.fMain.ddlPrinter.Zorder(0)
+Gui.fMain.ddlPrinter.Size(237,20)
+Gui.fMain.ddlPrinter.Position(16,192)
+Gui.fMain.ddlPrinter.FontName("Tahoma")
+Gui.fMain.ddlPrinter.FontSize(8.25)
+Gui.fMain.ddlPrinter.TabStop(True)
+Gui.fMain.ddlPrinter.TabIndex(9)
+Gui.fMain.lblRptLbl.Create(Label,"Report ID",True,47,13,0,16,133,True,0,"Tahoma",8.25,,0,0)
+Gui.fMain.lblRptLbl.BorderStyle(0)
+Gui.fMain.txtReportID.Create(TextBox,"",True,55,20,0,16,148,True,0,"Tahoma",8.25,,1)
+Gui.fMain.txtReportID.TabStop(True)
+Gui.fMain.txtReportID.TabIndex(7)
+Gui.fMain.txtReportID.MaxLength(6)
+Gui.fMain.lblRptDescLbl.Create(Label,"Report Description",True,89,13,0,103,133,True,0,"Tahoma",8.25,,0,0)
+Gui.fMain.lblRptDescLbl.BorderStyle(0)
+Gui.fMain.lblRptDesc.Create(Label,"",True,1,13,0,103,152,True,0,"Tahoma",8.25,,0,0)
+Gui.fMain.lblRptDesc.BorderStyle(0)
+Gui.fMain.lblRptDesc.FontStyle(True,False,False,False,False)
+Gui.fMain.lbl3.Create(Label,"Copies",True,32,13,0,257,177,True,0,"Tahoma",8.25,,0,0)
+Gui.fMain.lbl3.BorderStyle(0)
+Gui.fMain.txtCopies.Create(TextBox,"1",True,40,20,0,257,192,True,0,"Tahoma",8.25,,1)
+Gui.fMain.txtCopies.DefaultValue("1")
+Gui.fMain.txtCopies.MaxLength(3)
+Gui.fMain.txtCopies.TabStop(True)
+Gui.fMain.txtCopies.TabIndex(10)
+Gui.fMain.txtCopies.NumericOnly(2)
+Gui.fMain.txtStartBin.create(textbox,"",True,60,20,0,15,75,True,0,"Arial",8,-2147483643,1)
+Gui.fMain.txtStartBin.defaultvalue("")
+Gui.fMain.txtStartBin.MaxLength(6)
+Gui.fMain.txtStartBin.ToolTip("Starting Bin ID")
+Gui.fMain.txtStartBin.TabStop(True)
+Gui.fMain.txtStartBin.TabIndex(3)
+Gui.fMain.txtEndBin.create(textbox,"z",True,60,20,0,119,75,True,0,"Arial",8,-2147483643,1)
+Gui.fMain.txtEndBin.defaultvalue("z")
+Gui.fMain.txtEndBin.MaxLength(6)
+Gui.fMain.txtEndBin.ToolTip("Ending Bin ID")
+Gui.fMain.txtEndBin.TabStop(True)
+Gui.fMain.txtEndBin.TabIndex(5)
+Gui.fMain.lblStartBin.create(label,"Starting BIN",True,56,14,1,15,60,True,0,"Arial",8,16777215,0,0)
+Gui.fMain.lblStartBin.defaultvalue("")
+Gui.fMain.lblStartBin.BorderStyle(0)
+Gui.fMain.luStartBin.create(button)
+Gui.fMain.luStartBin.caption("")
+Gui.fMain.luStartBin.size(23,23)
+Gui.fMain.luStartBin.position(78,73)
+Gui.fMain.luStartBin.event(Click,luBin_Click)
+Gui.fMain.luStartBin.defaultvalue("")
+Gui.fMain.luStartBin.Enabled(True)
+Gui.fMain.luStartBin.Visible(True)
+Gui.fMain.luStartBin.Zorder(0)
+Gui.fMain.luStartBin.FontName("Tahoma")
+Gui.fMain.luStartBin.FontSize(8.25)
+Gui.fMain.luStartBin.SvgPicture("icon_browser_color")
+Gui.fMain.luStartBin.TabStop(True)
+Gui.fMain.luStartBin.TabIndex(4)
+Gui.fMain.lblEndBin.create(label,"Ending BIN",True,51,14,1,119,60,True,0,"Arial",8,16777215,0,0)
+Gui.fMain.lblEndBin.defaultvalue("")
+Gui.fMain.lblEndBin.BorderStyle(0)
+Gui.fMain.luEndBin.create(button)
+Gui.fMain.luEndBin.caption("")
+Gui.fMain.luEndBin.size(23,23)
+Gui.fMain.luEndBin.position(182,73)
+Gui.fMain.luEndBin.event(Click,luBin_Click)
+Gui.fMain.luEndBin.defaultvalue("")
+Gui.fMain.luEndBin.Enabled(True)
+Gui.fMain.luEndBin.Visible(True)
+Gui.fMain.luEndBin.Zorder(0)
+Gui.fMain.luEndBin.FontName("Tahoma")
+Gui.fMain.luEndBin.FontSize(8.25)
+Gui.fMain.luEndBin.SvgPicture("icon_browser_color")
+Gui.fMain.luEndBin.TabStop(True)
+Gui.fMain.luEndBin.TabIndex(6)
+Gui.fMain.cmdPrint.create(button)
+Gui.fMain.cmdPrint.caption("Print")
+Gui.fMain.cmdPrint.size(75,25)
+Gui.fMain.cmdPrint.position(15,249)
+Gui.fMain.cmdPrint.event(Click,cmdprint_click)
+Gui.fMain.cmdPrint.defaultvalue("")
+Gui.fMain.cmdPrint.Enabled(True)
+Gui.fMain.cmdPrint.Visible(True)
+Gui.fMain.cmdPrint.Zorder(0)
+Gui.fMain.cmdPrint.FontName("Tahoma")
+Gui.fMain.cmdPrint.FontSize(8.25)
+Gui.fMain.cmdPrint.SvgPicture("icon_printer_color")
+Gui.fMain.cmdPrint.TabStop(True)
+Gui.fMain.cmdPrint.TabIndex(11)
+Gui.fMain.cmdCancel.create(button)
+Gui.fMain.cmdCancel.caption("Cancel")
+Gui.fMain.cmdCancel.size(75,25)
+Gui.fMain.cmdCancel.position(94,249)
+Gui.fMain.cmdCancel.event(Click,cmdcancel_click)
+Gui.fMain.cmdCancel.defaultvalue("")
+Gui.fMain.cmdCancel.Enabled(True)
+Gui.fMain.cmdCancel.Visible(True)
+Gui.fMain.cmdCancel.Zorder(0)
+Gui.fMain.cmdCancel.FontName("Tahoma")
+Gui.fMain.cmdCancel.FontSize(8.25)
+Gui.fMain.cmdCancel.TabStop(True)
+Gui.fMain.cmdCancel.TabIndex(12)
+Gui.fMain.txtLoc.create(textbox,"",True,30,20,0,16,30,True,0,"Arial",8,-2147483643,1)
+Gui.fMain.txtLoc.defaultvalue("")
+Gui.fMain.txtLoc.MaxLength(2)
+Gui.fMain.txtLoc.TabStop(True)
+Gui.fMain.txtLoc.TabIndex(1)
+Gui.fMain.lblLocn.create(label,"Location",True,41,14,1,17,15,True,0,"Arial",8,16777215,0,0)
+Gui.fMain.lblLocn.defaultvalue("")
+Gui.fMain.lblLocn.BorderStyle(0)
+Gui.fMain.luLocn.Create(Button)
+Gui.fMain.luLocn.Enabled(True)
+Gui.fMain.luLocn.Visible(True)
+Gui.fMain.luLocn.Zorder(0)
+Gui.fMain.luLocn.Size(23,23)
+Gui.fMain.luLocn.Position(49,28)
+Gui.fMain.luLocn.Caption("")
+Gui.fMain.luLocn.FontName("Tahoma")
+Gui.fMain.luLocn.FontSize(8.25)
+Gui.fMain.luLocn.SvgPicture("icon_browser_color")
+Gui.fMain.luLocn.TabStop(True)
+Gui.fMain.luLocn.TabIndex(2)
+Gui.fMain.luLocn.Event(Click,luLocn_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.External.Include.Library("GAB_4428_Report_UniversalFunctions.lib")
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.UI.UsePixels
+F.Intrinsic.Control.Try
+	
+	V.Local..BulkDeclareString(sSql,sSavedPrinter)
+	V.Local..BulkDeclareLong(iUser)
+
+	F.ODBC.Connection!conx.OpenCompanyConnection
+	F.ODBC.Connection!conc.OpenCommonConnection
+	
+	'Dynamically determine ARC ID
+	F.Intrinsic.Control.CallSub(SetARCID)
+	
+	'Set a default report id...
+	F.Intrinsic.Control.CallSub(LoadDefaultReport)
+	
+	'Load Sentinel Printers dropdownlist...
+	F.Intrinsic.String.Build("Select if(ltrim(rtrim(SENTINELALIAS))='',ltrim(rtrim(PRINTERNAME)),ltrim(rtrim(SENTINELALIAS))), if(ltrim(rtrim(SENTINELALIAS))='',ltrim(rtrim(PRINTERNAME)),ltrim(rtrim(SENTINELALIAS))) From Server_Printers Where Sentinelenabled = 1 Order by Sentinelalias","",V.Local.sSql)
+	F.Data.Dictionary.CreateFromSQL("PRINTER","conc",V.Local.sSql)
+	Gui.fMain.ddlPrinter.AddItem("")
+	Gui.fMain.ddlPrinter.AddItems("Dictionary","PRINTER")
+	F.Data.Dictionary.Close("Printer")
+	
+	'Retrieve Stored Printer...
+	F.Intrinsic.Control.CallSub(RetrieveStoredPrinter)
+	
+	'Pop it to the top...
+	Gui.fMain..Show
+	Gui.fMain..AlwaysOnTop(True)
+	Gui.fMain..AlwaysOnTop(False)
+	Gui.fMain.txtLoc.SetFocus
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Catching) 
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.luLocn_Click.Start
+F.Intrinsic.Control.Try
+	
+	V.Local..BulkDeclareString(sSQL,sRet,sTitles,sWidths)
+
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	
+	F.Intrinsic.String.Split("Location*!*Location_Description","*!*",V.Local.sTitles)
+	F.Intrinsic.String.Split("600*!*1800","*!*",V.Local.sWidths)
+	
+	F.Intrinsic.UI.Browser("Select Location:","conx","select distinct LOCATION, LOCATION_DESC from V_LOCATIONS order by LOCATION",V.Local.sTitles,V.Local.sWidths,6000,8000,V.Local.sRet)
+	
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		
+		Gui.fMain.txtLoc.Text(V.Local.sRet(0).Trim)
+	F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Catching)  
+F.Intrinsic.Control.EndTry
+Program.Sub.luLocn_Click.End
+
+Program.Sub.luBin_Click.Start
+F.Intrinsic.Control.Try
+	
+	V.Local..BulkDeclareString(sSQL,sRet,sTitles,sWidths)
+
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	
+	F.Intrinsic.String.Split("Bin*!*Location*!*Bin_Description","*!*",V.Local.sTitles)
+	F.Intrinsic.String.Split("600*!*300*!*1800","*!*",V.Local.sWidths)
+	
+	F.Intrinsic.String.Build("select distinct BIN, LOCATION, BIN_DESCRIPTION from V_BIN_MASTER where LOCATION='{0}' order by BIN",V.Screen.fMain!txtLoc.Text.UCase,V.Local.sSql)
+	
+	F.Intrinsic.UI.Browser("Select Bin:","conx",V.Local.sSql,V.Local.sTitles,V.Local.sWidths,6000,8000,V.Local.sRet)
+	
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		
+		F.Intrinsic.Control.If(V.Args.ControlName,=,"LUSTARTBIN")
+			Gui.fMain.txtStartBin.Text(V.Local.sRet(0).Trim)
+			F.Intrinsic.Control.SelectCase(V.Screen.fMain!txtEndBin.Text.Trim)
+				F.Intrinsic.Control.CaseAny("","z")
+					Gui.fMain.txtEndBin.Text(V.Local.sRet(0).Trim)
+			F.Intrinsic.Control.EndSelect
+		F.Intrinsic.Control.Else
+			Gui.fMain.txtEndBin.Text(V.Local.sRet(0).Trim)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Catching) 
+F.Intrinsic.Control.EndTry
+Program.Sub.luBin_Click.End
+
+Program.Sub.cmdprint_click.Start
+F.Intrinsic.Control.Try
+	
+	V.Local..BulkDeclareString(sSql,sReportPath,sReportDesc,sFileName)
+	V.Local..BulkDeclareLong(iBIRunID,iBILogID,iUser)
+	
+	'Get run ID
+	F.Global.BI.GetRunID(V.Local.iBIRunID)
+	
+	'Starting BI Logging
+	F.Global.BI.StartLogging(V.Local.iBIRunID,V.Global.iBIRptID,-1,"",V.Local.iBILogID)
+	
+	F.Intrinsic.String.Build("Select BIN, LOCATION, BIN_DESCRIPTION from BIN_MASTER where BIN>='{0}' and BIN<='{1}' and LOCATION='{2}' order by BIN",V.Screen.fMain!txtStartBin.Text,V.Screen.fMain!txtEndBin.Text,V.Screen.fMain!txtLoc.Text,V.Local.sSql)
+	F.Data.DataTable.CreateFromSQL("dtData","conx",V.Local.sSql)
+	F.Data.DataTable.AddColumn("dtData","LABEL_COPY","Long",V.Screen.fMain!txtCopies.Text)
+	
+	F.Global.BI.PrintCodesoftLabelFromDataTable(V.Local.iBIRunID,V.Local.iBILogID,"dtData",V.Screen.fMain!ddlPrinter.Text,True)
+	
+	F.Intrinsic.Control.If(V.Screen.fMain!ddlPrinter.Text,<>,"")
+		'Save selected printer to the registry so next time we can load it as the default selection...
+		F.Global.Security.GetUserID(V.Caller.User,V.Caller.CompanyCode,V.Local.iUser)
+		F.Intrinsic.File.GetFileNameFromFQN(V.Caller.ScriptFile,V.Local.sFileName)
+		F.Intrinsic.String.Left(V.Local.sFileName,50,V.Local.sFileName)
+		F.Global.Registry.AddValue(V.Local.iUser,V.Caller.CompanyCode,V.Local.sFileName,V.Global.iBIRptID,1000,False,V.Screen.fMain!ddlPrinter.Text,False,0,-999.0,1/1/1980,12:00:00 AM)
+	F.Intrinsic.Control.EndIf
+	
+	Gui.fMain.txtLoc.Text("")
+	Gui.fMain.txtStartBin.Text("")
+	Gui.fMain.txtEndBin.Text("z")
+	Gui.fMain.txtLoc.SetFocus
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Catching) 
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdprint_click.End
+
+Program.Sub.cmdcancel_click.Start
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+Program.Sub.cmdcancel_click.End
+
+Program.Sub.Comments.Start
+${$5$}$20.1.8543.32295$}$0
+${$6$}$jwithrow$}$20230802193015458$}$D95tSYIikIvF+oq+s87EtBQePACEH+Ey8W86sZvBxWBnZ8gXst2i72KTSk9vieuuGwFsb9BBK9PugEHbkXQsjA==
+Program.Sub.Comments.End
